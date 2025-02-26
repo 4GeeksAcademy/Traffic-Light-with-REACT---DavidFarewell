@@ -5,6 +5,7 @@ const TrafficLight = () => {
     const [colors, setColors] = useState(["red", "yellow", "green"]); 
     const [color, setColor] = useState(""); 
 
+
     const changeLight = (newColor) => {
         setColor(newColor);
     };
@@ -19,7 +20,9 @@ const TrafficLight = () => {
 
     const addPurple = () => {
         if (!colors.includes("purple")) {
-            setColors([...colors, "purple"]);
+            let newColors = colors.slice(); 
+            newColors.push("purple"); 
+            setColors(newColors); 
         }
     };
 
@@ -32,7 +35,6 @@ const TrafficLight = () => {
                         key={index}
                         onClick={() => changeLight(lightColor)}
                         className={`light ${lightColor} ${color === lightColor ? "brillo" : ""}`}
-                        style={{ "--light-color": lightColor }} 
                     ></div>
                 ))}
             </div>

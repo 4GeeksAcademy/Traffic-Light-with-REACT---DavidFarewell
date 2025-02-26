@@ -1,5 +1,5 @@
 body {
-    background-color: #333333;
+    background-color: #222;
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -15,17 +15,18 @@ body {
 .palito {
     width: 10px;
     height: 100px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
 .traffic-light {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     width: 80px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    height: auto;
 }
 
 .light {
@@ -33,22 +34,15 @@ body {
     height: 50px;
     border-radius: 50%;
     margin: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: gray;
     cursor: pointer;
 }
 
-.red {
-    background-color: red;
-}
-
-.yellow {
-    background-color: rgb(255, 217, 0);
-}
-
-.green {
-    background-color: rgb(0, 250, 175);
-}
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.green { background-color: green; }
+.purple { background-color: purple; }
 
 .brillo {
-    box-shadow: 0px 0px 20px 5px white;
+    box-shadow: 0px 0px 20px 5px var(--light-color); 
 }
